@@ -1,0 +1,277 @@
+body{
+    background-image:url("photo_2025-07-17_09-13-36.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content:center;
+    align-items: center;
+    z-index: -1;
+}
+.mainLayout{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content:center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.452), rgb(48, 48, 48));
+    padding: 0 50px 50px 50px;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px 8px rgb(27, 27, 27);    
+    transition: transform 0.3s ease-out 0s, box-shadow 0.3s ease-out 0s;
+}
+
+.mainLayout:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 20px 5px rgb(0, 0, 0);
+
+}
+
+.field{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1px;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    border: solid black 4px;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: transform 0.3s ease-in-out 0s;
+}
+
+.field:hover{
+    transform: scale(1.02);
+    transition: transform 0.5s linear 0s;
+}
+.cell{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.74);
+    border: 2px black solid;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out 0s;
+}
+
+.cell:hover{
+    transform: scale(1.2);
+    transition: transform 0.05s linear 0s;
+}
+
+.cell:active{
+    transform: scale(0.95);
+
+}
+
+.heading{
+    transition: transform 0.3s linear 0s;
+    align-self: center;
+    justify-self: center;
+}
+
+.heading:hover{
+    transform: scale(1.05);
+
+}
+
+.starterHeader{
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: 500;
+    justify-self: center;
+    transition: transform 0.3s linear 0s;
+}
+
+.starterHeader:hover{
+    transform: scale(1.05);
+}
+
+.button{
+    display: block;
+    justify-self: center;
+    margin-top: 20px;
+    border: solid 2px black;
+    width: 100px;
+    height: 35px;
+    border-radius: 7px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background-color: rgba(184, 184, 184, 0.767); /* allows gradient to show */
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.747);
+    transition: transform 30ms ease-in-out, background-color 0.6s ease-in-out;
+}
+
+.button:hover{
+    background-color: rgba(255, 255, 255, 0.74);
+    transform: scale(1.05);
+    transition: transform 0.6s ease-in-out 0s;
+}
+.button:active{
+    transform: scale(0.95);
+    transition: transform 30ms ease 0s;
+}
+
+.font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: large;
+  font-style: normal;
+}
+
+.stats{
+    font-size: 20px;
+}
+
+.el .el1{
+    overflow: hidden;
+    text-align: center;
+    justify-items: center;
+    margin-bottom: 0;
+}
+
+.el{
+    min-width: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    max-width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.el1{
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+    vertical-align: middle;
+    line-height: 0;
+    max-height: 25px;
+    max-width: 25px;
+}
+.button1{
+    display: block;
+    justify-self: center;
+    margin-top: 10px;
+    border: solid 2px black;
+    border-radius: 7px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background-color: rgba(184, 184, 184, 0.767); /* allows gradient to show */
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.747);
+    transition: transform 30ms ease-in-out, background-color 0.6s ease-in-out;
+    padding-bottom: 0;
+}
+
+.button1:hover{
+    background-color: rgba(255, 255, 255, 0.74);
+    transform: scale(1.05);
+    transition: transform 0.6s ease-in-out 0s;
+}
+.button1:active{
+    transform: scale(0.95);
+    transition: transform 30ms ease 0s;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    max-width: 30px;
+    max-height: 30px;
+    margin: 10px 0;
+}
+
+.amountText{
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.rotate1 {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  display: block;
+}
+
+.previous1 .next1{
+    height: 100px;
+    width: 100px;
+}
+
+.buttons{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imageDiv{
+    width: 200px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 0;
+    background-color: white;
+    padding: 10px;
+    border: solid 2px black;
+    border-radius: 20px;
+}
+
+.image{
+    width: 200px;
+    height: auto;
+    min-height: 200px;
+}
+
+.shipMenu{
+    padding: 20px;
+    border: solid 2px black;
+    border-radius: 20px;
+    background-color: rgba(184, 184, 184, 0.767); /* allows gradient to show */
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.747);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats{
+    margin-top: 100px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainLayout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* keeps layout responsive */
+  width: 100%;
+}
+
+.headingBanner {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
