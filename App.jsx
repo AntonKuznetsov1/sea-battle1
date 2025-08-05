@@ -44,6 +44,20 @@ const App = () => {
         setPhase(phases[3])
   }}, [spacesLeftP1, spacesLeftP2]);
 
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    const element1 = document.querySelector('.mainLayout')
+    const element = document.querySelector('.interface');
+    if (phase !== "start") {
+      element.classList.add('span');
+      element1.classList.remove('startPadding');
+    } else if (phase === "start" ) {
+      element.classList.remove('span');
+      element1.classList.add('startPadding')
+    }
+  }, [phase]);
+
   const amountMap = player
     ? {
         1: amount1P1,
@@ -184,7 +198,16 @@ const App = () => {
       }
 
     player ? setHitStatusP1(newStatus) : setHitStatusP2(newStatus);
-    player ? setIsDone1(true) : setIsDone2(true) 
+    if (player){
+      if (newStatus[id] === 2){
+        setIsDone1(true) 
+      }
+    } else{
+      if (newStatus[id] === 2){
+        setIsDone2(true) 
+      }
+    }
+    
   };
 
   const Previous = () => {
@@ -231,7 +254,7 @@ const App = () => {
   };
 
   return (
-    <div className="container">
+    <div className="scrollWrapper">
       <div className="mainLayout">
         <div className="interface">
           <h1 className="font heading">Sea Battle</h1>
@@ -286,7 +309,7 @@ const App = () => {
           </button>: undefined}
         </div>
 
-        <div className="stats starterHeader">
+        {phase === "start" && <div className="stats starterHeader">
           {phase === "start" && (
             <>
               <p>
@@ -339,7 +362,7 @@ const App = () => {
               </div>
             </>
           )}
-        </div>
+        </div>}
       </div>
     </div>
   );
